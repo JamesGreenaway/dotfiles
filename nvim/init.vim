@@ -76,34 +76,18 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained",
   highlight = {
     enable = true,
-    disable = { 
-      "c_sharp",
-      "erlang",
-      "fennel",
-      "julia",
-      "kotlin",
-      "nix",
-      "ocaml",
-      "ocaml_interface",
-      "ocamllex",
-      "php",
-      "ql",
-      "rst",
-      "scala",
-      "swift",
-      "teal",
-      "toml",
-      "verilog"
-    },
+    disable = { },
+  },
+  indentation = {
+    enable = true,
+    disable = { },
+  },
+  folding = {
+    enable = true,
+    disable = { },
   },
 }
 EOF
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option('sources', {
-    \ '_': ['ale'],
-    \ })
 
 " ale
 let g:ale_fixers = {
@@ -128,6 +112,9 @@ let g:ale_echo_msg_error_str     = 'E'
 let g:ale_echo_msg_warning_str   = 'W'
 
 set omnifunc=ale#completion#OmniFunc
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#ale#get_source_options({
+      \ 'priority': 10,
+      \ }))
 
 hi ALEError        cterm=underline
 hi link ALEErrorSign ErrorMsg
@@ -188,3 +175,7 @@ nnoremap <C-n> :LuaTreeToggle<CR>
 nnoremap <leader>r :LuaTreeRefresh<CR>
 nnoremap <leader>n :LuaTreeFindFile<CR>
 
+" asyncomplete
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
