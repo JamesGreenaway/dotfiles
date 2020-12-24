@@ -16,5 +16,6 @@ brew "wget"
 brew "yarn"
 brew "heroku/brew/heroku"
 brew "mongodb/brew/mongodb-community"
+brew "luajit", args: [ "build-from-source" ]
 cask "syncthing"
 
