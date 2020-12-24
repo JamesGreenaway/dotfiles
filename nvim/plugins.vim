@@ -12,5 +12,6 @@ Plug 'tpope/vim-surround'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kassio/neoterm'
 Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'diepm/vim-rest-console'
 call plug#end()
 
