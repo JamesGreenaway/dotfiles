@@ -36,6 +36,7 @@ set statusline+=\ %l
 set statusline+=:
 set statusline+=%c 
 set statusline+=\ \ 
+"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 set mouse=a
 set splitright
@@ -90,55 +91,55 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
-" ale
-let g:ale_fixers = {
-    \ 'css':              ['prettier'],
-    \ 'scss':             ['prettier'],
-    \ 'less':             ['prettier'],
-    \ 'html':             ['prettier'],
-    \ 'json':             ['prettier'],
-    \ 'javascript':       ['prettier', 'eslint'],
-    \ 'javascriptreact':  ['prettier', 'eslint'],
-    \ 'typescript':       ['prettier', 'eslint'],
-    \ 'typescriptreact':  ['prettier', 'eslint'],
-    \ }
-let g:ale_fix_on_save            = 1
-let g:ale_set_highlights         = 1
-let g:ale_sign_highlight_linenrs = 1
-let g:ale_open_list              = 1
-let g:ale_hover_cursor        = 0
-let g:ale_echo_cursor = 0
-let g:ale_hover_to_preview       = 1
-let g:ale_completion_delay       = 50
-let g:ale_sign_error             = 'E'
-let g:ale_sign_warning           = 'W'
-let g:ale_sign_info              = 'I'
-let g:ale_echo_msg_error_str     = 'E'
-let g:ale_echo_msg_warning_str   = 'W'
-
-set omnifunc=ale#completion#OmniFunc
-au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#ale#get_source_options({
-      \ 'priority': 10,
-      \ }))
-
-hi ALEError        cterm=underline
-hi link ALEErrorSign ErrorMsg
-hi link ALEErrorSignLineNr ErrorMsg
-hi ALEInfo         cterm=underline
-hi link ALEInfoSign Normal
-hi link ALEInfoSignLineNr Normal
-hi ALEStyleError   cterm=underline
-hi link ALEStyleErrorSign ErrorMsg
-hi link ALEStyleErrorSignLineNr ErrorMsg
-hi ALEStyleWarning cterm=underline
-hi link ALEStyleWarningSign WarningMsg
-hi link ALEWarningSign WarningMsg
-hi link ALEStyleWarningSignLineNr WarningMsg
-hi ALEWarning      cterm=underline
-hi link ALEWarningSign WarningMsg
-hi link ALEWarningSignLineNr WarningMsg
-
-imap <C-Space> <Plug>(ale_complete)
+"" ale
+"let g:ale_fixers = {
+"    \ 'css':              ['prettier'],
+"    \ 'scss':             ['prettier'],
+"    \ 'less':             ['prettier'],
+"    \ 'html':             ['prettier'],
+"    \ 'json':             ['prettier'],
+"    \ 'javascript':       ['prettier', 'eslint'],
+"    \ 'javascriptreact':  ['prettier', 'eslint'],
+"    \ 'typescript':       ['prettier', 'eslint'],
+"    \ 'typescriptreact':  ['prettier', 'eslint'],
+"    \ }
+"let g:ale_fix_on_save            = 1
+"let g:ale_set_highlights         = 1
+"let g:ale_sign_highlight_linenrs = 1
+"let g:ale_open_list              = 1
+"let g:ale_hover_cursor        = 0
+"let g:ale_echo_cursor = 0
+"let g:ale_hover_to_preview       = 1
+"let g:ale_completion_delay       = 50
+"let g:ale_sign_error             = 'E'
+"let g:ale_sign_warning           = 'W'
+"let g:ale_sign_info              = 'I'
+"let g:ale_echo_msg_error_str     = 'E'
+"let g:ale_echo_msg_warning_str   = 'W'
+"
+"set omnifunc=ale#completion#OmniFunc
+"au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#ale#get_source_options({
+"      \ 'priority': 10,
+"      \ }))
+"
+"hi ALEError        cterm=underline
+"hi link ALEErrorSign ErrorMsg
+"hi link ALEErrorSignLineNr ErrorMsg
+"hi ALEInfo         cterm=underline
+"hi link ALEInfoSign Normal
+"hi link ALEInfoSignLineNr Normal
+"hi ALEStyleError   cterm=underline
+"hi link ALEStyleErrorSign ErrorMsg
+"hi link ALEStyleErrorSignLineNr ErrorMsg
+"hi ALEStyleWarning cterm=underline
+"hi link ALEStyleWarningSign WarningMsg
+"hi link ALEWarningSign WarningMsg
+"hi link ALEStyleWarningSignLineNr WarningMsg
+"hi ALEWarning      cterm=underline
+"hi link ALEWarningSign WarningMsg
+"hi link ALEWarningSignLineNr WarningMsg
+"
+"imap <C-Space> <Plug>(ale_complete)
 
 " fzf
 nmap <leader><tab> <plug>(fzf-maps-n)
@@ -182,11 +183,11 @@ nnoremap <C-n> :LuaTreeToggle<CR>
 nnoremap <leader>r :LuaTreeRefresh<CR>
 nnoremap <leader>n :LuaTreeFindFile<CR>
 
-" asyncomplete
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
-
+"" asyncomplete
+"inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+"
 " vrc
 let g:vrc_trigger = '<silent><leader>vrc'
 let g:vrc_curl_opts={
@@ -195,3 +196,78 @@ let g:vrc_curl_opts={
     \'--show-error': '',
     \'--silent': ''
     \ }
+
+" coc
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+command! -nargs=0 Format :call CocAction('format')
+command! -nargs=? Fold   :call CocAction('fold', <f-args>)
+command! -nargs=0 OR     :call CocAction('runCommand', 'editor.action.organizeImport')
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <leader>rn  <Plug>(coc-rename)
+xmap <leader>f   <Plug>(coc-format-selected)
+nmap <leader>f   <Plug>(coc-format-selected)
+xmap <leader>a   <Plug>(coc-codeaction-selected)
+nmap <leader>a   <Plug>(coc-codeaction-selected)
+nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <leader>qf  <Plug>(coc-fix-current)
+xmap if <Plug>(coc-funcobj-i)
+omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap af <Plug>(coc-funcobj-a)
+xmap ic <Plug>(coc-classobj-i)
+omap ic <Plug>(coc-classobj-i)
+xmap ac <Plug>(coc-classobj-a)
+omap ac <Plug>(coc-classobj-a)
+nmap <silent> <C-s> <Plug>(coc-range-select)
+xmap <silent> <C-s> <Plug>(coc-range-select)
+inoremap <silent><expr> <c-space> coc#refresh()
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+    \ : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+augroup mygroup
+  autocmd!
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
