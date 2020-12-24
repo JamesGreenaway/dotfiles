@@ -12,6 +12,6 @@
 - shell:
     - brew bundle --cleanup --no-lock
     -
-      command: nvim -es -u nvim/plugins.vim -i NONE -c "PlugInstall" -c "qa"
+      command: nvim -es -u nvim/plugins.vim -i NONE -c "PlugClean" -c "PlugInstall" -c "qa"
       stdout: true
       stderr: true
