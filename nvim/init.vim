@@ -69,6 +69,7 @@ set updatetime=300
 set shortmess+=c
 set signcolumn=yes
 set showtabline=0
+set previewheight=5
 
 " neovim-treesitter
 lua <<EOF
@@ -105,6 +106,10 @@ let g:ale_fix_on_save            = 1
 let g:ale_set_highlights         = 1
 let g:ale_sign_highlight_linenrs = 1
 let g:ale_open_list              = 1
+let g:ale_hover_cursor        = 0
+let g:ale_echo_cursor = 0
+let g:ale_hover_to_preview       = 1
+let g:ale_completion_delay       = 50
 let g:ale_sign_error             = 'E'
 let g:ale_sign_warning           = 'W'
 let g:ale_sign_info              = 'I'
@@ -132,6 +137,8 @@ hi link ALEStyleWarningSignLineNr WarningMsg
 hi ALEWarning      cterm=underline
 hi link ALEWarningSign WarningMsg
 hi link ALEWarningSignLineNr WarningMsg
+
+imap <C-Space> <Plug>(ale_complete)
 
 " fzf
 nmap <leader><tab> <plug>(fzf-maps-n)
