@@ -1,7 +1,7 @@
 - link: 
-    ~/.config/nvim:
+    ~/.vim:
       glob: true
-      path: nvim
+      path: vim
       relink: true
     ~/.config/starship.toml: starship.toml
     ~/.Brewfile: Brewfile
@@ -11,11 +11,3 @@
 
 - shell:
     - brew bundle --cleanup --no-lock
-    -
-      command: nvim -es -u nvim/plugins.vim -i NONE -c "PlugInstall" -c "qa"
-      stdout: true
-      stderr: true
-    -
-      command: nvim -es -u nvim/plugins.vim -i NONE -c "PlugClean" -c "qa"
-      stdout: true
-      stderr: true
