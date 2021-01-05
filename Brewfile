@@ -15,6 +15,6 @@ brew "wget"
 brew "yarn"
 brew "heroku/brew/heroku"
 brew "mongodb/brew/mongodb-community"
+brew "emacs"
 cask "font-jetbrains-mono"
 cask "syncthing"
-
