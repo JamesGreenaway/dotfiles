@@ -11,3 +11,7 @@
 
 - shell:
     - brew bundle --cleanup --no-lock
+
+- link:
+    /Applications/Emacs.app:
+      path: /usr/local/opt/emacs-plus@27/Emacs.app
