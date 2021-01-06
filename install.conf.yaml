@@ -1,13 +1,11 @@
-- link: 
-    ~/.vim:
-      glob: true
-      path: vim
-      relink: true
+- link:
+    ~/.vim: vim
     ~/.config/starship.toml: starship.toml
     ~/.Brewfile: Brewfile
     ~/.gitconfig: gitconfig
     ~/.hushlogin: hushlogin
     ~/.zshrc: zshrc
+    ~/.emacs.d: emacs
 
 - shell:
     - brew bundle --cleanup --no-lock
