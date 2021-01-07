@@ -1,15 +1,14 @@
+- shell:
+    - brew bundle --cleanup --no-lock --file ~/.Brewfile
+    - ~/.dotfiles/emacs/bin/doom -y --doomdir ~/.dotfiles/doom --localdir ~/.dotfiles/emacs/.local install
+    - ~/.dotfiles/emacs/bin/doom -y --doomdir ~/.dotfiles/doom --localdir ~/.dotfiles/emacs/.local upgrade
+
 - link:
     ~/.vim: vim
     ~/.config/starship.toml: starship.toml
-    ~/.Brewfile: Brewfile
     ~/.gitconfig: gitconfig
     ~/.hushlogin: hushlogin
     ~/.zshrc: zshrc
     ~/.emacs.d: emacs
-
-- shell:
-    - brew bundle --cleanup --no-lock
-
-- link:
-    /Applications/Emacs.app:
-      path: /usr/local/opt/emacs-plus@27/Emacs.app
+    /Applications/Emacs.app: /usr/local/opt/emacs-plus@27/Emacs.app
+    ~/.doom.d: doom
