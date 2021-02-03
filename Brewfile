@@ -25,6 +25,7 @@ cask "discord"
 cask "slack"
 cask "zoom"
 cask "figma"
+cask "cycling74-max"
 mas "AdGuard for Safari", id: 1440147259
 mas "Bumpr", id: 1166066070
 mas "Pages", id: 409201541
