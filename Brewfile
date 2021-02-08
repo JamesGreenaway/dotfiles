@@ -26,7 +26,7 @@ cask "slack"
 cask "zoom"
 cask "figma"
 mas "AdGuard for Safari", id: 1440147259
-mas "Bumpr", id: 1166066070
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959
 mas "Spark", id: 1176895641
+mas "Affinity Designer", id: 824171161  
