@@ -1,5 +1,8 @@
 - shell:
-    - brew bundle --cleanup --no-lock --file ~/.Brewfile
+    - 
+      command: brew bundle --cleanup --no-lock --file ~/.Brewfile
+      stdout: true
+      stderr: true
 
 - link:
     ~/.vim: vim
