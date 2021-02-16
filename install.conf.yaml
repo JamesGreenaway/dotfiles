@@ -10,3 +10,4 @@
     ~/.gitconfig: gitconfig
     ~/.hushlogin: hushlogin
     ~/.zshrc: zshrc
+    /usr/local/bin/lilypond: lilypond
