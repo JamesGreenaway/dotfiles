@@ -17,6 +17,8 @@ brew "heroku/brew/heroku"
 brew "mongodb/brew/mongodb-community"
 brew "mas"
 brew "syncthing"
+brew "wakeonlan"
+brew "timidity"
 cask "visual-studio-code"
 cask "spotify"
 cask "google-chrome"
@@ -26,7 +28,5 @@ cask "slack"
 cask "zoom"
 cask "figma"
 mas "AdGuard for Safari", id: 1440147259
-mas "Pages", id: 409201541
 mas "Slack", id: 803453959
 mas "Spark", id: 1176895641
-mas "Affinity Designer", id: 824171161  
