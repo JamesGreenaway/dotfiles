@@ -1,3 +1,0 @@
-#!/bin/zsh
-python3 -m ly "indent; reformat" -i -d backup-suffix= ./$1
-docker run -v $(pwd):/app -w /app jeandeaual/lilypond:2.23.0 lilypond -dno-point-and-click $1
