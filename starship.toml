@@ -5,3 +5,5 @@ symbol = "🌱"
 full_symbol = "🔋"
 charging_symbol = "⚡️"
 discharging_symbol = "💀"
+[python]
+python_binary = "python3"
