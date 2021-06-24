@@ -1,3 +1,5 @@
 [user]
 	email = greenaway.james@me.com
 	name = James Greenaway
+[pull]
+	rebase = false
