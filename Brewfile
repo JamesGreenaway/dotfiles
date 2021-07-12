@@ -26,3 +26,4 @@ mas "AdGuard for Safari", id: 1440147259
 mas "Slack", id: 803453959
 mas "Spark", id: 1176895641
 mas "CleanMyMac X", id: 1339170533
+mas "HLTH Posture & Break Reminders", id: 1503879351
