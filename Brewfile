@@ -16,14 +16,11 @@ brew "doctl"
 cask "visual-studio-code"
 cask "spotify"
 cask "google-chrome"
-cask "google-chrome-canary"
 cask "discord"
 cask "slack"
 cask "zoom"
 cask "figma"
 mas "AdGuard for Safari", id: 1440147259
 mas "Slack", id: 803453959
-mas "Spark", id: 1176895641
 mas "CleanMyMac X", id: 1339170533
-mas "Timery for Toggl", id: 1425368544
 mas "Logic Pro", id: 634148309
