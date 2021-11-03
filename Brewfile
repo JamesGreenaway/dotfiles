@@ -14,13 +14,12 @@ brew "mongodb/brew/mongodb-community"
 brew "mas"
 brew "doctl"
 cask "visual-studio-code"
-cask "spotify"
 cask "google-chrome"
-cask "discord"
 cask "slack"
 cask "zoom"
 cask "figma"
-mas "AdGuard for Safari", id: 1440147259
-mas "Slack", id: 803453959
-mas "CleanMyMac X", id: 1339170533
-mas "Logic Pro", id: 634148309
+#mas "AdGuard for Safari", id: 1440147259
+#mas "Slack", id: 803453959
+#mas "CleanMyMac X", id: 1339170533
+#mas "Logic Pro", id: 634148309
+#mas "Toggl Track - Hours & Time", id: 957734279
