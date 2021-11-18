@@ -11,13 +11,15 @@ brew "starship"
 brew "yarn"
 brew "heroku/brew/heroku"
 brew "mongodb/brew/mongodb-community"
-brew "mas"
+#brew "mas"
 brew "doctl"
+brew "youtube-dl"
 cask "visual-studio-code"
 cask "google-chrome"
 cask "slack"
 cask "zoom"
 cask "figma"
+cask "spotify"
 #mas "AdGuard for Safari", id: 1440147259
 #mas "Slack", id: 803453959
 #mas "CleanMyMac X", id: 1339170533
