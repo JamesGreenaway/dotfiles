@@ -3,3 +3,5 @@
 	name = James Greenaway
 [pull]
 	rebase = false
+[init]
+	defaultBranch = main
