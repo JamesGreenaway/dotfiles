@@ -21,4 +21,3 @@ mas "Slack", id: 803453959
 mas "CleanMyMac X", id: 1339170533
 mas "#blockit - Block distractions", id: 1492879787
 mas "Super Agent for Safari", id: 1568262835 
-mas "Shortery (2.0)", id: 1594183810
