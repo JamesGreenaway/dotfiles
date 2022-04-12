@@ -11,6 +11,7 @@ brew "yarn"
 brew "mongodb/brew/mongodb-community"
 brew "mas"
 brew "lilypond"
+brew "fluidsynth"
 cask "visual-studio-code"
 cask "google-chrome"
 cask "slack"
@@ -22,5 +23,3 @@ mas "Slack", id: 803453959
 mas "CleanMyMac X", id: 1339170533
 mas "#blockit - Block distractions", id: 1492879787
 mas "Super Agent for Safari", id: 1568262835 
-mas "Tyme 3 - Time Tracking", id: 1461456897 
-mas "Shortery (2.1)", id: 1594183810
