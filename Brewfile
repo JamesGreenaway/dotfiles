@@ -11,13 +11,13 @@ brew "yarn"
 brew "mongodb/brew/mongodb-community"
 brew "mas"
 brew "fluidsynth"
+cask "emacs"
 cask "visual-studio-code"
 cask "google-chrome"
 cask "slack"
 cask "zoom"
 cask "nota"
 cask "spotify"
-cask "emacs"
 mas "AdGuard for Safari", id: 1440147259
 mas "Slack", id: 803453959
 mas "CleanMyMac X", id: 1339170533
