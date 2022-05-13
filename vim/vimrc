@@ -31,4 +31,3 @@ set nowritebackup
 set shortmess+=c
 set showtabline=0
 set cmdheight=2
-noremap <Leader>e :w !node client.js<CR><CR>
