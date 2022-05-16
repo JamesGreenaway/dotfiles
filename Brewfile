@@ -10,12 +10,14 @@ brew "starship"
 brew "yarn"
 brew "mongodb/brew/mongodb-community"
 brew "mas"
+brew "rust"
 cask "visual-studio-code"
 cask "google-chrome"
 cask "slack"
 cask "zoom"
 cask "nota"
 cask "spotify"
+cask "microsoft-teams"
 mas "AdGuard for Safari", id: 1440147259
 mas "Slack", id: 803453959
 mas "CleanMyMac X", id: 1339170533
