@@ -18,6 +18,7 @@ cask "spotify"
 cask "microsoft-teams"
 cask "ilok-license-manager"
 cask "hey"
+cask "topnotch"
 mas "AdGuard for Safari", id: 1440147259
 mas "Slack", id: 803453959
 mas "CleanMyMac X", id: 1339170533
