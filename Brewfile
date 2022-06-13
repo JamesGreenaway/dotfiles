@@ -16,7 +16,6 @@ cask "slack"
 cask "zoom"
 cask "spotify"
 cask "microsoft-teams"
-cask "ilok-license-manager"
 cask "hey"
 cask "topnotch"
 mas "AdGuard for Safari", id: 1440147259
