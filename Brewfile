@@ -21,6 +21,7 @@ cask "microsoft-teams"
 cask "hey"
 cask "topnotch"
 cask "ableton-live-suite"
+cask "nota"
 mas "AdGuard for Safari", id: 1440147259
 mas "Slack", id: 803453959
 mas "CleanMyMac X", id: 1339170533
