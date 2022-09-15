@@ -12,6 +12,7 @@ brew "mongodb/brew/mongodb-community"
 brew "mas"
 brew "cmake"
 brew "emscripten"
+brew "iconsur"
 cask "visual-studio-code"
 cask "google-chrome"
 cask "slack"
@@ -20,10 +21,9 @@ cask "spotify"
 cask "microsoft-teams"
 cask "hey"
 cask "topnotch"
-cask "ableton-live-suite"
 cask "nota"
+cask "ilok-license-manager"
 mas "AdGuard for Safari", id: 1440147259
 mas "Slack", id: 803453959
 mas "CleanMyMac X", id: 1339170533
-mas "#blockit - Block distractions", id: 1492879787
 mas "Super Agent for Safari", id: 1568262835 
