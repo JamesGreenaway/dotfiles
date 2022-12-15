@@ -21,8 +21,11 @@ cask "hey"
 cask "topnotch"
 cask "nota"
 cask "cycling74-max"
+cask "microsoft-edge"
+cask "mongodb-compass"
+cask "ableton-live-suite"
 mas "AdGuard for Safari", id: 1440147259
 mas "Slack", id: 803453959
 mas "CleanMyMac X", id: 1339170533
-mas "Super Agent for Safari", id: 1568262835 
 mas "#blockit - Block distractions", id: 1492879787 
+mas "Super Agent for Safari", id: 1568262835  
