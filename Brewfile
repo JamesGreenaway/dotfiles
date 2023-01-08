@@ -26,5 +26,4 @@ cask "ableton-live-suite"
 mas "AdGuard for Safari", id: 1440147259
 mas "Slack", id: 803453959
 mas "CleanMyMac X", id: 1339170533
-mas "#blockit - Block distractions", id: 1492879787 
 mas "Super Agent for Safari", id: 1568262835  
