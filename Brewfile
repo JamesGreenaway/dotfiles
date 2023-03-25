@@ -23,6 +23,7 @@ cask "nota"
 cask "microsoft-edge"
 cask "mongodb-compass"
 cask "ableton-live-suite"
+cask "cycling74-max"
 mas "AdGuard for Safari", id: 1440147259
 mas "Slack", id: 803453959
 mas "CleanMyMac X", id: 1339170533
