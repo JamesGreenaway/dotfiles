@@ -13,18 +13,10 @@ brew "mas"
 brew "iconsur"
 cask "visual-studio-code"
 cask "google-chrome"
-cask "slack"
-cask "zoom"
 cask "spotify"
-cask "microsoft-teams"
 cask "hey"
 cask "topnotch"
-cask "nota"
-cask "microsoft-edge"
-cask "mongodb-compass"
 cask "ableton-live-suite"
-cask "cycling74-max"
 mas "AdGuard for Safari", id: 1440147259
-mas "Slack", id: 803453959
 mas "CleanMyMac X", id: 1339170533
 mas "Super Agent for Safari", id: 1568262835  
