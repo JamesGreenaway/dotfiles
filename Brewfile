@@ -16,8 +16,6 @@ cask "google-chrome"
 cask "hey"
 cask "topnotch"
 cask "ableton-live-suite"
-cask "spline"
-cask "cycling74-max"
 mas "AdGuard for Safari", id: 1440147259
 mas "CleanMyMac X", id: 1339170533
 mas "Super Agent for Safari", id: 1568262835  
