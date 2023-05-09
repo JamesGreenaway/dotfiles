@@ -15,8 +15,8 @@ cask "visual-studio-code"
 cask "google-chrome"
 cask "hey"
 cask "topnotch"
-cask "ableton-live-suite"
 mas "AdGuard for Safari", id: 1440147259
 mas "CleanMyMac X", id: 1339170533
 mas "Super Agent for Safari", id: 1568262835  
 mas "Logic Pro", id: 634148309
+mas "Mainstage", id: 634159523
