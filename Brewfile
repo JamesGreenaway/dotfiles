@@ -20,3 +20,4 @@ cask "figma"
 mas "AdGuard for Safari", id: 1440147259
 mas "Logic Pro", id: 634148309
 mas "Balance: Mindful time tracking", id: 1637311725  
+mas "Hidden Bar", id: 1452453066
