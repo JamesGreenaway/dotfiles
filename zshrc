@@ -13,7 +13,8 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type d --follow --hidden . "$1"
 }
-export FZF_DEFAULT_COMMAND="fd --follow --hidden -E '/Users/james/Library/Mobile Documents/' -E '/System/Volumes/Data/Users/james/Library/Mobile Documents/' -E '/Users/james/Library/Application Support/CloudDocs/' -E '/System/Volumes/Data/Users/james/Library/Application Support/CloudDocs/'"
+
+export FZF_DEFAULT_COMMAND="fd --follow --hidden -E '/Users/james/Library/Mobile Documents/' -E '/System/Volumes/Data/Users/james/Library/Mobile Documents/' -E '/Users/james/Library/Application Support/CloudDocs/' -E '/System/Volumes/Data/Users/james/Library/Application Support/CloudDocs/' -E 'System/Volumes/Data/Users/james/.Trash/' -E 'Users/james/.Trash/'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type d --follow --hidden -E '/Users/james/Library/Mobile Documents/' -E '/System/Volumes/Data/Users/james/Library/Mobile Documents/' -E '/Users/james/Library/Application Support/CloudDocs/' -E '/System/Volumes/Data/Users/james/Library/Application Support/CloudDocs/' ."
 
@@ -24,9 +25,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-# heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH=/Users/james/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
-
-alias python=/usr/bin/python3
-PATH=$HOME/Library/Python/3.8/bin:$PATH
-PATH=$HOME/.cargo/bin:$PATH
+PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init --path)"
+  eval "$(pyenv init -)"
+fi

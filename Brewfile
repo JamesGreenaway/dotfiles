@@ -1,7 +1,6 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 tap "homebrew/services"
+tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "mongodb/brew"
 brew "fd"
@@ -11,9 +10,15 @@ brew "yarn"
 brew "mongodb/brew/mongodb-community"
 brew "mas"
 brew "iconsur"
+brew "unar"
+brew "pyenv"
+brew "xz"
 cask "visual-studio-code"
 cask "google-chrome"
 cask "hey"
-cask "topnotch"
-mas "Logic Pro", id: 634148309
+cask "zoom"
+cask "spline"
+cask "figma"
 mas "Bear Markdown Notes", id: 1091189122
+mas "Kindle", id: 302584613
+mas "Slack for Desktop", id: 803453959  
