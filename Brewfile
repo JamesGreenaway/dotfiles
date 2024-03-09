@@ -20,3 +20,4 @@ cask "plugdata"
 mas "Bear Markdown Notes", id: 1091189122
 mas "Kindle", id: 302584613
 mas "Slack for Desktop", id: 803453959  
+mas "Bluetooth MIDI Connect", id: 1074606480  
