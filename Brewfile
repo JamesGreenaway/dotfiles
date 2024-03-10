@@ -15,8 +15,7 @@ cask "visual-studio-code"
 cask "google-chrome"
 cask "hey"
 cask "zoom"
-cask "spline"
-cask "plugdata"
+cask "ableton-live-suite"
 mas "Bear Markdown Notes", id: 1091189122
 mas "Kindle", id: 302584613
 mas "Slack for Desktop", id: 803453959  
