@@ -15,7 +15,10 @@ cask "visual-studio-code"
 cask "google-chrome"
 cask "hey"
 cask "zoom"
-cask "ableton-live-suite"
+cask "cycling74-max"
+cask "spline"
+cask "figma"
+cask "discord"
 mas "Bear Markdown Notes", id: 1091189122
 mas "Kindle", id: 302584613
 mas "Slack for Desktop", id: 803453959  
