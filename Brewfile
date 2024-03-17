@@ -18,6 +18,7 @@ cask "zoom"
 cask "spline"
 cask "figma"
 cask "discord"
+cask "linear-linear"
 mas "Bear Markdown Notes", id: 1091189122
 mas "Kindle", id: 302584613
 mas "Slack for Desktop", id: 803453959  
