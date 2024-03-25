@@ -16,10 +16,10 @@ cask "google-chrome"
 cask "hey"
 cask "zoom"
 cask "linear-linear"
-cask "sketch"
 cask "sf-symbols"
 cask "logi-options-plus"
 cask "focusrite-control"
+cask "jetbrains-toolbox"
 mas "Bear Markdown Notes", id: 1091189122
 mas "Kindle", id: 302584613
 mas "Slack for Desktop", id: 803453959  
